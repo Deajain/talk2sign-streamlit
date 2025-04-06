@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk2Sign</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <img src="/logo.webp" alt="Talk2Sign Logo" id="logo">
+        <h1>Talk2Sign</h1>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="startRecognition()">Start Voice Recognition</button>
+        <button type="button" onclick="stopRecognition()">Stop Voice Recognition</button>
+        <button type="button" onclick="resetTranscript()">Reset</button>
+    </div>
+    
+    <div id="status">Press "Start Voice Recognition" and speak...</div>
+    <div id="content-wrapper">
+        <div id="transcript"></div>
+        <div id="video-container">
+            <video id="video" preload="none" muted></video>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="downloadTranscript()">Download Transcript</button>
+        <button type="button" onclick="playSignLanguage()">Sign Language</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
